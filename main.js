@@ -1,13 +1,4 @@
 
-
-const playerSelection = prompt("Pick rock, paper, or scissors");
-const computerSelection = getComputerChoice();
-
-function getComputerChoice(){
-    const decision = ["Rock", "Paper", "Scissors"];
-    return (decision[(Math.floor(Math.random() * decision.length))]);
-};
-
 function playRound(playerSelection, computerSelection){
     if (playerSelection.toLowerCase() === "rock" && computerSelection === "Scissors"){
         alert("You win! Rock beats Scissors");
@@ -30,4 +21,18 @@ function playRound(playerSelection, computerSelection){
     }
 };
 
-playRound(playerSelection, computerSelection)
+function game(){
+    for(let i = 1; i <= 5; i++){
+        let playerSelection = prompt("Pick rock, paper, or scissors");
+        let computerSelection = getComputerChoice();
+
+        function getComputerChoice(){
+            let decision = ["Rock", "Paper", "Scissors"];
+            return (decision[(Math.floor(Math.random() * decision.length))]);
+    };
+    
+        playRound(playerSelection, computerSelection)
+    }
+}
+
+game()
