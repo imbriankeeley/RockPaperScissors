@@ -1,6 +1,10 @@
+
+//Player Scores
 let playerScore = 0
 let computerScore = 0
 
+
+//Game Round
 function playRound(playerSelection, computerSelection){
 
     if (playerSelection.toLowerCase() === "rock" && computerSelection === "Scissors"){
@@ -32,6 +36,7 @@ function playRound(playerSelection, computerSelection){
     return computerScore
 };
 
+//Game Result
 function gameResult(){
     if (playerScore === computerScore){
         alert("You tied!");
@@ -42,7 +47,7 @@ function gameResult(){
     }
 };
 
-
+//Game
 function game(){
     for(let i = 1; i <= 5; i++){
         let playerSelection = prompt("Pick rock, paper, or scissors");
