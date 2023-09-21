@@ -1,4 +1,3 @@
-
 //Player Scores
 let playerScore = 0
 let computerScore = 0
@@ -6,6 +5,8 @@ let computerScore = 0
 
 //Game Round
 function playRound(playerSelection, computerSelection){
+    
+
     if (playerSelection === computerSelection){
         alert("It's a Tie!");
     } else if ((playerSelection === "rock" && computerSelection === "scissors") || (playerSelection === "paper" && computerSelection === "rock") || (playerSelection === "scissors" && computerSelection === "paper")){
@@ -19,6 +20,7 @@ function playRound(playerSelection, computerSelection){
     return computerScore
 };
 
+
 //Game Result
 function gameResult(){
     if (playerScore === computerScore){
@@ -30,23 +32,43 @@ function gameResult(){
     }
 };
 
-//Game
 function game(){
-    for(let i = 1; i <= 5; i++){
-        let playerSelection = prompt("Pick rock, paper, or scissors").toLowerCase();
-        let computerSelection = getComputerChoice();
-
-        function getComputerChoice(){
-            let decision = ["rock", "paper", "scissors"];
-            return (decision[(Math.floor(Math.random() * decision.length))]);
-    };
-    
-        playRound(playerSelection, computerSelection);
-
-    };
-
-    gameResult()
-
+//Generate Random Pick For Computer
+function getComputerChoice(){
+    let decision = ["rock", "paper", "scissors"];
+    return (decision[(Math.floor(Math.random() * decision.length))]);
 };
 
+const rock = document.querySelector('#rock');
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
+
+//Play Round On Click
+for(let i = 0; i < 5; i++){
+    rock.addEventListener('click', () => {
+        let computerSelection = getComputerChoice();
+        getComputerChoice()
+        playRound('rock', computerSelection);
+    });
+    paper.addEventListener('click', () => {
+        let computerSelection = getComputerChoice();
+        getComputerChoice()
+        playRound('paper', computerSelection);
+    });
+    scissors.addEventListener('click', () => {
+        let computerSelection = getComputerChoice();
+        getComputerChoice()
+        playRound('scissors', computerSelection);
+    });
+}
+
+
+
+
+}
+
 game()
+
+
+
+
