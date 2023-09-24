@@ -79,9 +79,9 @@ function gameResult(){
         playerScore = 0
         computerScore = 0
 
-        let btnclick = new Audio('./audio/yay.mp3')
-        btnclick.currentTime = 0
-        btnclick.play()
+        let yay = new Audio('./audio/yay.mp3')
+        yay.currentTime = 0
+        yay.play()
 
         return playerScore
         return computerScore
@@ -94,9 +94,9 @@ function gameResult(){
         playerScore = 0
         computerScore = 0
 
-        let btnclick = new Audio('./audio/awwa.mp3')
-        btnclick.currentTime = 0
-        btnclick.play()
+        let aww = new Audio('./audio/aww.mp3')
+        aww.currentTime = 0
+        aww.play()
         
         return playerScore
         return computerScore
