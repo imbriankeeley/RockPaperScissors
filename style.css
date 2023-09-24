@@ -6,6 +6,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
 
 .header {
@@ -93,4 +95,104 @@ button:hover {
 footer {
     margin-top: auto;
     margin-bottom: 2rem;
+}
+
+@media (max-width: 705px) {
+    #results {
+        width: 80vw;
+        height: 10rem;
+    }
+
+    #results h1 {
+        font-size: 40px;
+    }
+
+    #gamecontainer {
+        width: 85vw;
+        
+    }
+
+    #gamecontainer button {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    
+}
+
+@media (max-width: 532px) {
+    #results {
+        width: 70vw;
+        height: 8rem;
+    }
+
+    #results h1 {
+        font-size: 32px;
+    }
+
+    #gamecontainer {
+        width: 80vw;
+    }
+
+    #gamecontainer button {
+        height: 7rem;
+        width: 7rem;
+    }
+
+    #gamecontainer img {
+        height: 6rem;
+    }
+
+    .header h1 {
+        font-size: 35px;
+    }
+
+    .reset {
+        height: 60px;
+        width: 125px;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 496) {
+    #results {
+        width: 80vw;
+        height: 8rem;
+    }
+
+    #results h1 {
+        font-size: 29px;
+    }
+}
+
+@media (max-width: 420px) {
+    .header h1 {
+        font-size: 30px;
+    }
+
+    #results {
+        width: 80vw;
+    }
+
+    #results h1 {
+        font-size: 28px;
+    }
+
+    #gamecontainer button {
+        height: 6rem;
+        width: 6rem;
+    }
+
+    #gamecontainer img {
+        height: 5rem;
+    }
+
+    .reset {
+        height: 56px;
+        width: 120px;
+    }
+}
+/*#results {
+    width: 80vw;
+    height: 8rem;
 }
