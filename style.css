@@ -8,6 +8,19 @@ body {
     height: 100vh;
 }
 
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header h1 {
+    margin: 2rem;
+    margin-bottom: 0px;
+    padding: .05rem;
+}
+
 div {
     display: flex;   
     justify-content: center;
@@ -36,6 +49,10 @@ button {
     height: 200px;
     width: 200px;
     box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+}
+
+button:hover {
+    transform: scale(1.1);
 }
 
 .reset {
