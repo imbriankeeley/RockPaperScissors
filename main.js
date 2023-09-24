@@ -40,14 +40,20 @@ function playRound(playerSelection, computerSelection){
         computersScore.textContent = `Computer: ${computerScore}`
         status.textContent = 'Bummer, it\'s a tie'
     } else if ((playerSelection === "rock" && computerSelection === "scissors") || (playerSelection === "paper" && computerSelection === "rock") || (playerSelection === "scissors" && computerSelection === "paper")){
-        
+        let btnclick = new Audio('/audio/click.mp3')
+            btnclick.currentTime = 0
+            btnclick.play()
+
         playerScore ++;
         playersScore.textContent = `Player:  ${playerScore}`
         computersScore.textContent = `Computer: ${computerScore}`
         status.textContent = 'You won this round!'
 
     } else if ((playerSelection === "rock" && computerSelection === "paper") ||(playerSelection === "paper" && computerSelection === "scissors") || (playerSelection === "scissors" && computerSelection === "rock")){
-        
+        let btnclick = new Audio('/audio/click.mp3')
+            btnclick.currentTime = 0
+            btnclick.play()
+
         computerScore ++;
         playersScore.textContent = `Player:  ${playerScore}`
         computersScore.textContent = `Computer: ${computerScore}`
@@ -72,6 +78,11 @@ function gameResult(){
         status.textContent = 'Congratulations! Play again?'
         playerScore = 0
         computerScore = 0
+
+        let btnclick = new Audio('/audio/yay.mp3')
+        btnclick.currentTime = 0
+        btnclick.play()
+
         return playerScore
         return computerScore
 
@@ -82,6 +93,11 @@ function gameResult(){
         status.textContent = 'Play again?'
         playerScore = 0
         computerScore = 0
+
+        let btnclick = new Audio('/audio/awwa.mp3')
+        btnclick.currentTime = 0
+        btnclick.play()
+        
         return playerScore
         return computerScore
     }
@@ -103,18 +119,21 @@ function game(){
             let computerSelection = getComputerChoice();
             getComputerChoice()
             playRound('rock', computerSelection);
+            
             gameResult()
         });
         paper.addEventListener('click', () => {
             let computerSelection = getComputerChoice();
             getComputerChoice()
             playRound('paper', computerSelection);
+            
             gameResult()
         });
         scissors.addEventListener('click', () => {
             let computerSelection = getComputerChoice();
             getComputerChoice()
             playRound('scissors', computerSelection);
+            
             gameResult()
         });
     }
