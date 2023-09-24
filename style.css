@@ -1,6 +1,6 @@
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: bisque;
+    font-family: 'Kalam', cursive, sans-serif;
+    background-color: #A8D1D1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,23 +29,35 @@ h1 {
 button {
     text-align: center;
     font-size: 30px;
-    border-radius: 4px;
+    border-radius: 1rem;
     border: solid black 4px;
-    background-color: aquamarine;
+    background-color: #F1F7B5;
     color: rgb(59, 5, 5);
     height: 200px;
     width: 200px;
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+}
+
+.reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    width: 150px;
+    font-family: 'Kalam', cursive, sans-serif;
 }
 
 #results {
     border: solid black 4px;
-    border-radius: 4px;
+    border-radius: 1rem;
     height: 300px;
     width: 600px;
-    background-color: aquamarine;
+    background-color: #F1F7B5;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-top: 1rem;
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
 }
 
 .transform {
@@ -59,4 +71,9 @@ button {
     width: 200px;
     transform: scale(1.2);
 
+}
+
+footer {
+    margin-top: auto;
+    margin-bottom: 2rem;
 }

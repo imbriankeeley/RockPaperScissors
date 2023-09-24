@@ -5,20 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
-    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="header">
+        <h1>Rock Paper Scissors!</h1>
+    </div>
+
     <div id="results">
         
     </div>
 
     <div id="gamecontainer">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
+        <button id="rock"><img src="icons/hand.png"/></button>
+        <button id="paper"><img src="icons/paper.png"/></button>
+        <button id="scissors"><img src="icons/scissors.png"/></button>
     </div>
 
+    <button class="reset">Reset?</button>
+
+    <footer>Copyright imbriankeeley 2023</footer>
     <script src="main.js"></script>
 </body>
 </html>
