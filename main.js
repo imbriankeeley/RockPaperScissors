@@ -105,14 +105,7 @@ function game(){
 
 const resetButton = document.querySelector('.reset');
 resetButton.addEventListener('click', () => {
-    const status = document.querySelector('.status');
-
-    let playerScore = 0;
-    let computerScore = 0;
-    playersScore.textContent = `Player: ${playerScore}`
-    computersScore.textContent = `Computer: ${computerScore}`
-    status.textContent = 'Chose your hand'
-
+    window.location.reload()
 });
 
 game()
