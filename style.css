@@ -41,6 +41,10 @@ h1 {
     padding: 40px;
 }
 
+#gamecontainer button img {
+    display: inline-block;
+}
+
 button {
     text-align: center;
     font-size: 30px;
@@ -51,6 +55,7 @@ button {
     height: 200px;
     width: 200px;
     box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+    position: relative;
 }
 
 button:hover {
