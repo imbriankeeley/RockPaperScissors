@@ -70,43 +70,61 @@ function gameResult(){
         playersScore.textContent = `You `
         computersScore.textContent = `Win!`
         status.textContent = 'Congratulations! Play again?'
+        playerScore = 0
+        computerScore = 0
+        return playerScore
+        return computerScore
+
 
     } else if(computerScore === 5){
         playersScore.textContent = `You `
         computersScore.textContent = `Lose!`
         status.textContent = 'Play again?'
-        
+        playerScore = 0
+        computerScore = 0
+        return playerScore
+        return computerScore
     }
 };
 
 function game(){
 
 //Play Round On Click
-    rock.addEventListener('click', () => {
-        let computerSelection = getComputerChoice();
-        getComputerChoice()
-        playRound('rock', computerSelection);
-        gameResult()
-    });
-    paper.addEventListener('click', () => {
-        let computerSelection = getComputerChoice();
-        getComputerChoice()
-        playRound('paper', computerSelection);
-        gameResult()
-    });
-    scissors.addEventListener('click', () => {
-        let computerSelection = getComputerChoice();
-        getComputerChoice()
-        playRound('scissors', computerSelection);
-        gameResult()
-    });
+    
 
+    if(playerScore === 5){
+        console
+        return
+    } else if(computerScore === 5){
+        console.log('hi')
+        return
+    } else {
+        rock.addEventListener('click', () => {
+            let computerSelection = getComputerChoice();
+            getComputerChoice()
+            playRound('rock', computerSelection);
+            gameResult()
+        });
+        paper.addEventListener('click', () => {
+            let computerSelection = getComputerChoice();
+            getComputerChoice()
+            playRound('paper', computerSelection);
+            gameResult()
+        });
+        scissors.addEventListener('click', () => {
+            let computerSelection = getComputerChoice();
+            getComputerChoice()
+            playRound('scissors', computerSelection);
+            gameResult()
+        });
+    }
 }
 
 const resetButton = document.querySelector('.reset');
 resetButton.addEventListener('click', () => {
     window.location.reload()
 });
+
 
 game()
 
