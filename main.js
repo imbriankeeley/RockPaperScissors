@@ -40,7 +40,7 @@ function playRound(playerSelection, computerSelection){
         computersScore.textContent = `Computer: ${computerScore}`
         status.textContent = 'Bummer, it\'s a tie'
     } else if ((playerSelection === "rock" && computerSelection === "scissors") || (playerSelection === "paper" && computerSelection === "rock") || (playerSelection === "scissors" && computerSelection === "paper")){
-        let btnclick = new Audio('/audio/click.mp3')
+        let btnclick = new Audio('./audio/click.mp3')
             btnclick.currentTime = 0
             btnclick.play()
 
@@ -50,7 +50,7 @@ function playRound(playerSelection, computerSelection){
         status.textContent = 'You won this round!'
 
     } else if ((playerSelection === "rock" && computerSelection === "paper") ||(playerSelection === "paper" && computerSelection === "scissors") || (playerSelection === "scissors" && computerSelection === "rock")){
-        let btnclick = new Audio('/audio/click.mp3')
+        let btnclick = new Audio('./audio/click.mp3')
             btnclick.currentTime = 0
             btnclick.play()
 
@@ -79,7 +79,7 @@ function gameResult(){
         playerScore = 0
         computerScore = 0
 
-        let btnclick = new Audio('/audio/yay.mp3')
+        let btnclick = new Audio('./audio/yay.mp3')
         btnclick.currentTime = 0
         btnclick.play()
 
@@ -94,7 +94,7 @@ function gameResult(){
         playerScore = 0
         computerScore = 0
 
-        let btnclick = new Audio('/audio/awwa.mp3')
+        let btnclick = new Audio('./audio/awwa.mp3')
         btnclick.currentTime = 0
         btnclick.play()
         
