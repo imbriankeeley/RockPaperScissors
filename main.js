@@ -31,15 +31,22 @@ function getComputerChoice(){
 };
 
 //Game Round
+
 function playRound(playerSelection, computerSelection){
     const status = document.querySelector('.status');
 
     if (playerSelection === computerSelection){ 
 
+        let btnclick = new Audio('./audio/tie.mp3')
+            btnclick.currentTime = 0
+            btnclick.play()
+
         playersScore.textContent = `Player:  ${playerScore}`
         computersScore.textContent = `Computer: ${computerScore}`
         status.textContent = 'Bummer, it\'s a tie'
-    } else if ((playerSelection === "rock" && computerSelection === "scissors") || (playerSelection === "paper" && computerSelection === "rock") || (playerSelection === "scissors" && computerSelection === "paper")){
+
+    } else if (playerSelection === "rock" && computerSelection === "scissors"){
+
         let btnclick = new Audio('./audio/click.mp3')
             btnclick.currentTime = 0
             btnclick.play()
@@ -47,9 +54,32 @@ function playRound(playerSelection, computerSelection){
         playerScore ++;
         playersScore.textContent = `Player:  ${playerScore}`
         computersScore.textContent = `Computer: ${computerScore}`
-        status.textContent = 'You won this round!'
+        status.textContent = 'Good job! Rock beats Scissors!!'
 
-    } else if ((playerSelection === "rock" && computerSelection === "paper") ||(playerSelection === "paper" && computerSelection === "scissors") || (playerSelection === "scissors" && computerSelection === "rock")){
+    } else if (playerSelection === "paper" && computerSelection === "rock") {
+
+        let btnclick = new Audio('./audio/click.mp3')
+            btnclick.currentTime = 0
+            btnclick.play()
+
+        playerScore ++;
+        playersScore.textContent = `Player:  ${playerScore}`
+        computersScore.textContent = `Computer: ${computerScore}`
+        status.textContent = 'Good job! Paper beats Rock!!'
+
+    } else if (playerSelection === "scissors" && computerSelection === "paper") {
+
+        let btnclick = new Audio('./audio/click.mp3')
+            btnclick.currentTime = 0
+            btnclick.play()
+
+        playerScore ++;
+        playersScore.textContent = `Player:  ${playerScore}`
+        computersScore.textContent = `Computer: ${computerScore}`
+        status.textContent = 'Good job! Scissors beats Paper!!'
+
+    } else if (playerSelection === "paper" && computerSelection === "scissors") {
+
         let btnclick = new Audio('./audio/click.mp3')
             btnclick.currentTime = 0
             btnclick.play()
@@ -57,7 +87,29 @@ function playRound(playerSelection, computerSelection){
         computerScore ++;
         playersScore.textContent = `Player:  ${playerScore}`
         computersScore.textContent = `Computer: ${computerScore}`
-        status.textContent = 'You lost this round :('
+        status.textContent = ':/ Scissors beats Paper'
+
+    } else if (playerSelection === "scissors" && computerSelection === "rock") {
+
+        let btnclick = new Audio('./audio/click.mp3')
+            btnclick.currentTime = 0
+            btnclick.play()
+
+        computerScore ++;
+        playersScore.textContent = `Player:  ${playerScore}`
+        computersScore.textContent = `Computer: ${computerScore}`
+        status.textContent = ':/ Rock beats Scissors'
+        
+    } else if (playerSelection === "rock" && computerSelection === "paper"){
+
+        let btnclick = new Audio('./audio/click.mp3')
+            btnclick.currentTime = 0
+            btnclick.play()
+
+        computerScore ++;
+        playersScore.textContent = `Player:  ${playerScore}`
+        computersScore.textContent = `Computer: ${computerScore}`
+        status.textContent = ':/ Paper beats Rock'
 
     }
 
@@ -139,9 +191,11 @@ function game(){
     }
 }
 
-const resetButton = document.querySelector('.reset');
+const resetButton = document.querySelector('.play-pause');
 resetButton.addEventListener('click', () => {
-    window.location.reload()
+    let music = new Audio('./audio/backgroundmusic.mp3')
+        music.currentTime = 0
+        music.play()
 });
 
 
