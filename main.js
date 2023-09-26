@@ -1,4 +1,5 @@
 //Variables
+
 let playerScore = 0
 let computerScore = 0
 
@@ -25,6 +26,7 @@ scores.appendChild(computersScoreContainer);
 
 
 //Generate Random Pick For Computer
+
 function getComputerChoice(){
     let decision = ["rock", "paper", "scissors"];
     return (decision[(Math.floor(Math.random() * decision.length))]);
@@ -120,6 +122,7 @@ function playRound(playerSelection, computerSelection){
 };
 
 //Game Result
+
 function gameResult(){
     const status = document.querySelector('.status');
 
@@ -158,15 +161,6 @@ function gameResult(){
 function game(){
 
 //Play Round On Click
-    
-
-    if(playerScore === 5){
-        console
-        return
-    } else if(computerScore === 5){
-        console.log('hi')
-        return
-    } else {
         rock.addEventListener('click', () => {
             let computerSelection = getComputerChoice();
             getComputerChoice()
@@ -188,11 +182,13 @@ function game(){
             
             gameResult()
         });
-    }
+    
 }
 
-const resetButton = document.querySelector('.play-pause');
-resetButton.addEventListener('click', () => {
+//Music Button
+
+const musicButton = document.querySelector('.play-pause');
+musicButton.addEventListener('click', () => {
     let music = new Audio('./audio/backgroundmusic.mp3')
         music.currentTime = 0
         music.play()
